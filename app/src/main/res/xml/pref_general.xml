@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="@string/pref_ordering_key"
+        android:entries="@array/ordering_entries"
+        android:entryValues="@array/ordering_entries_values"
+        android:defaultValue="@string/pref_popular_value"
+        android:title="@string/pref_ordering_title"/>
+    <EditTextPreference
+        android:inputType="number"
+        android:key="@string/pref_page_key"
+        android:title="@string/pref_page_title"
+        android:defaultValue="@string/pref_page_dValue"
+        />
+
+    <EditTextPreference
+        android:key="@string/pref_favorite_key"
+        android:defaultValue="@string/pref_favorite_dValue"
+        android:selectable="false"
+
+        />
+    <EditTextPreference
+        android:key="@string/pref_firstTime_key"
+        android:defaultValue="@string/pref_firstTime_dValue"
+        android:selectable="false"
+        />
+
+
+</PreferenceScreen>
