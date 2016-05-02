@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.elshaarawy.movies.MovieDetailsActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_bg">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:gravity="center_vertical"
+                android:padding="@dimen/md_title_Padding"
+                android:text="Chappie"
+                android:textColor="@color/white"
+                android:textSize="@dimen/md_title_textSize" />
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/md_container_marginTop"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/md_container_paddingBottom"
+                android:paddingLeft="@dimen/md_container_lr_Padding"
+                android:paddingRight="@dimen/md_container_lr_Padding">
+
+
+                <LinearLayout
+                    android:id="@+id/inner_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/poster"
+                        android:layout_width="@dimen/md_poster_layout_width"
+                        android:layout_height="@dimen/md_poster_layout_height"
+                        android:layout_marginLeft="@dimen/md_poster_layout_marginLeft"
+                        android:src="@drawable/loading" />
+
+                    <LinearLayout
+                        android:id="@+id/statistics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/md_statistics_paddingLeft">
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/md_statistics_layout_marginTop"
+                            android:text="2015"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/md_statistics_yearTextSize" />
+
+
+                        <TextView
+                            android:id="@+id/rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/md_statistics_layout_marginTop"
+                            android:paddingRight="2dp"
+                            android:text="8.1/10"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/md_statistics_ratingTextSize"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/vote_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/md_statistics_layout_marginTop"
+                            android:text="80,000 votes"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/md_statistics_verySmallTextSize" />
+
+                        <Button
+                            android:id="@+id/favorite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/md_statistics_layout_marginTop"
+                            android:background="@color/favorite_bg"
+                            android:paddingLeft="@dimen/md_Button_lr_Padding"
+                            android:paddingRight="@dimen/md_Button_lr_Padding"
+                            android:text="@string/dm_favorite_text"
+                            android:textColor="@color/btn_gray"
+                            android:textSize="@dimen/md_Button_textSize" />
+
+                        <Button
+                            android:id="@+id/trailer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/md_statistics_layout_marginTop"
+                            android:layout_marginTop="@dimen/md_statistics_layout_marginTop"
+                            android:background="@color/trailer_bg"
+                            android:paddingLeft="@dimen/md_Button_lr_Padding"
+                            android:paddingRight="@dimen/md_Button_lr_Padding"
+                            android:text="@string/dm_trailer_text"
+                            android:textColor="@color/btn_gray"
+                            android:textSize="@dimen/md_Button_textSize" />
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/md_overview_marginTop"
+                    android:text="ageMaker including versions of Lorem Ipsum"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/md_overview_textSize" />
+                <TextView
+                    android:id="@+id/reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/md_statistics_layout_marginTop"
+                    android:layout_marginBottom="@dimen/md_statistics_layout_marginTop"
+                    android:text="@string/reviewDefaultText"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/md_statistics_verySmallTextSize"
+                    />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_share"
+        app:backgroundTint="#be8fe16e"
+        app:fabSize="normal" />
+</RelativeLayout>
