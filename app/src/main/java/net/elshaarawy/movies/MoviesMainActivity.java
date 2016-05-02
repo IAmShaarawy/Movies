@@ -31,7 +31,7 @@ public class MoviesMainActivity extends AppCompatActivity implements MovieListen
 
         } else if (isTap) {
             getSupportFragmentManager().beginTransaction().add(R.id.mainFragmentTap, moviesMainFragment).commit();
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         } else {
             getSupportFragmentManager().beginTransaction().replace(R.id.mainFragmentPort, moviesMainFragment).commit();
         }
